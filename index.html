@@ -6,26 +6,42 @@
     <title>Weather Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={c97bc02fb2a9573f74010db138c97564}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
 </head>
 
 <body>
-
   <div class="bg-primary pt-4 pb-4"> 
     <div class="container">
         <h1 class="text-center text-white">Weather Dashboard</h1>
     </div>
 </div>
-    <aside>
-      <p>Search for city</p>
-    </aside>
-    <div class="columns">
-        <div class="column is-full">
-          First column
-        </div>
+<nav class="navbar bg-light mb-2">
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input id="location-input" class="form-control me-2" type="search" placeholder="City" aria-label="location-button">
+      <button class="btn btn-outline-primary" type="submit" id="location-button">Search</button>
+    </form>
+ </div>
+</nav> 
+<div class="col-lg-9"> 
+  <div class="col">
+    <div class="card">
+      <p class="card-header">Current Weather</p>
+      <div id="currentWeather" class="mt-4">
+      </div>
     </div>
-    <section>
-        <p>5-Day Forecast</p>
-    </section>
+  </div>
+</div> 
+<div class="col-lg-9">
+  <div class="col">
+    <div class="card">
+      <p class="card-header">5-Day Forecast</p>
+      <div id="forecast" class="mt-4">
+      </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./assets/script.js"></script>
 </body>
 </html>
