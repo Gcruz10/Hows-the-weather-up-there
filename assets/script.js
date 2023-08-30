@@ -3,7 +3,8 @@ var APIKEY = "c97bc02fb2a9573f74010db138c97564";
 
 
 function getLocation(city) {
-    fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=5&appid=" + APIKEY)
+    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=5&appid=" + APIKEY)
+
         .then(function(response){
             return response.json()
         })
@@ -41,6 +42,7 @@ function getCurrentWeather(lat, long) {
             console.error("Fetch error:", error);
         });
 }
+
 
 function fetchDailyForecast(lat, long) {
     fetch("https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + long + "&units=imperial&exclude=current,minutely,hourly,alerts&appid=" + APIKEY)
