@@ -61,11 +61,12 @@ function fetchDailyForecast(lat, long) {
             
             for (let i = 0; i < 5; i++) {
                 forecastElement.innerHTML += `
-                    <div class="card">
-                        <h3>${moment.unix(data.daily[i].dt).format('MM/DD/YYYY')}</h3>
+                    <div class="forecast">
+                        <h3>${moment.unix(data.daily[i].dt).format("dddd")}</h3>
                         <p>Temperature: ${data.daily[i].temp.day} °F</p>
                         <p>Weather: ${data.daily[i].weather[0].description}</p>
                     </div>
+
                 `;
             }
             }
